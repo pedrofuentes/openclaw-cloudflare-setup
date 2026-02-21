@@ -2,6 +2,8 @@
 
 Step-by-step guides to deploy your own personal AI assistant using [OpenClaw](https://docs.openclaw.ai/) on Cloudflare Workers + Sandbox containers.
 
+Based on [**cloudflare/moltworker**](https://github.com/cloudflare/moltworker) — Cloudflare's official worker for running OpenClaw in a [Sandbox container](https://developers.cloudflare.com/containers/).
+
 ## Guides
 
 ### [SETUP.md](SETUP.md) — Complete Manual Guide
@@ -26,19 +28,28 @@ Each step is labeled:
 - **USER** — you do it in the browser (Cloudflare dashboard, Telegram, etc.)
 - **BOTH** — the agent runs the command, you provide the value
 
-## What is this?
+## Background
 
-[OpenClaw](https://github.com/openclaw/openclaw) is an open-source AI assistant platform. [Moltworker](https://github.com/cloudflare/moltworker) is Cloudflare's official worker that runs OpenClaw inside a Sandbox container.
+[**OpenClaw**](https://github.com/openclaw/openclaw) is an open-source AI assistant platform. [**cloudflare/moltworker**](https://github.com/cloudflare/moltworker) is Cloudflare's official Worker that runs OpenClaw inside a Sandbox container — giving you a personal AI assistant that runs on Cloudflare's edge.
 
-These guides document how to fork moltworker and customize it into a personal AI assistant with:
+The moltworker repo provides the base infrastructure: the Worker code, Dockerfile, startup script, and proxy layer. These guides document how to **fork it and customize it** into a fully-featured personal assistant with multi-model support, persistent storage, messaging integrations, and more.
 
-- **Multiple AI models** with automatic fallbacks
-- **Persistent memory** across container restarts (via R2)
-- **Telegram, Discord, Slack** channel integrations
-- **Browser automation** (screenshots, web scraping)
-- **Web search** capabilities
-- **Cron scheduling** for recurring tasks
-- **Custom skills** for extensibility
+### What moltworker provides
+
+- Cloudflare Worker that manages the Sandbox container lifecycle
+- HTTP/WebSocket proxy to the OpenClaw gateway
+- Admin UI for device pairing
+- CDP shim for browser automation via Cloudflare Browser Rendering
+- R2-based persistence (backup/restore on container restart)
+- Startup script that patches OpenClaw config from environment variables
+
+### What these guides add
+
+- Step-by-step setup from zero to working deployment
+- Multi-model configuration via AI Gateway (5+ providers)
+- Free model integration (NVIDIA NIM)
+- Gotchas and fixes discovered through real deployment experience
+- Agent-friendly version for AI-assisted setup
 
 ## Estimated Cost
 
