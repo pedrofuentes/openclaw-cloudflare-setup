@@ -4,6 +4,18 @@ Step-by-step guides to deploy your own personal AI assistant using [OpenClaw](ht
 
 Based on [**cloudflare/moltworker**](https://github.com/cloudflare/moltworker) — Cloudflare's official worker for running OpenClaw in a [Sandbox container](https://developers.cloudflare.com/containers/).
 
+## Quick Start with GitHub Copilot
+
+1. Fork [cloudflare/moltworker](https://github.com/cloudflare/moltworker) on GitHub
+2. Clone your fork and open it in VS Code
+3. Open Copilot Chat (`Ctrl+Shift+I`) and switch to **Agent** mode
+4. Add `SETUP-AGENT.md` from this repo to your workspace (or paste its contents)
+5. Send this message to the agent:
+
+   > Read SETUP-AGENT.md and guide me through the full setup step by step. Wait for my input when you need values from the Cloudflare dashboard.
+
+The agent will walk you through the entire deployment — running commands, editing files, and telling you exactly what to do in the Cloudflare dashboard at each step.
+
 ## Guides
 
 ### [SETUP.md](SETUP.md) — Complete Manual Guide
