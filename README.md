@@ -18,9 +18,9 @@ Once Cloudflare has created your repo:
 
 1. Clone it and open it in **VS Code**
 2. Open Copilot Chat (`Ctrl+Shift+I`) and switch to **Agent** mode
-3. Send this message:
+3. Send this message (replace the repo URL with yours):
 
-   > Initialize this workspace following the setup guide at https://github.com/pedrofuentes/openclaw-cloudflare-setup/blob/main/SETUP-AGENT.md — read it and guide me through the full setup step by step. Wait for my input when you need values from the Cloudflare dashboard.
+   > Initialize this workspace based on https://github.com/YOUR_USER/YOUR_REPO following the setup guide at https://github.com/pedrofuentes/openclaw-cloudflare-setup/blob/main/SETUP-AGENT.md — read it and guide me through the full setup step by step. Wait for my input when you need values from the Cloudflare dashboard.
 
 That's it. The agent will read the guide, run commands, edit files, and tell you exactly what to do in the Cloudflare dashboard at each step.
 
