@@ -6,22 +6,23 @@ These guides are the result of a successful end-to-end deployment — documentin
 
 ## Deploy
 
-Click the button below to deploy moltworker to your Cloudflare account, or go to the [moltworker repo](https://github.com/cloudflare/moltworker) and click **Deploy to Cloudflare** from there:
+Click the button below to deploy moltworker to your Cloudflare account. Cloudflare will automatically create a repo in your GitHub account with all the code:
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/moltworker)
 
-Then follow the guides below to configure everything — multi-model AI, persistent storage, Telegram, browser automation, and more.
+You can also find this button on the [moltworker repo README](https://github.com/cloudflare/moltworker).
 
 ## Quick Start with GitHub Copilot
 
-1. After deploying, clone your new repo and open it in VS Code
+Once Cloudflare has created your repo:
+
+1. Clone it and open it in **VS Code**
 2. Open Copilot Chat (`Ctrl+Shift+I`) and switch to **Agent** mode
-3. Add `SETUP-AGENT.md` from this repo to your workspace (or paste its contents)
-4. Send this message to the agent:
+3. Send this message:
 
-   > Read SETUP-AGENT.md and guide me through the full setup step by step. Wait for my input when you need values from the Cloudflare dashboard.
+   > Initialize this workspace following the setup guide at https://github.com/pedrofuentes/openclaw-cloudflare-setup/blob/main/SETUP-AGENT.md — read it and guide me through the full setup step by step. Wait for my input when you need values from the Cloudflare dashboard.
 
-The agent will walk you through the entire configuration — running commands, editing files, and telling you exactly what to do in the Cloudflare dashboard at each step.
+That's it. The agent will read the guide, run commands, edit files, and tell you exactly what to do in the Cloudflare dashboard at each step.
 
 ## Guides
 
